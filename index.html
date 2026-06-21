@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Furqan — Data Engineer portfolio. Transforming raw data into powerful insights using Python, SQL, and modern data pipelines." />
+  <meta name="keywords" content="Data Engineer, Python, SQL, ETL, data pipelines, portfolio, Furqan" />
+  <meta name="author" content="Furqan" />
+  <meta property="og:title" content="Furqan | Data Engineer" />
+  <meta property="og:description" content="Transforming raw data into powerful insights." />
+  <meta property="og:type" content="website" />
+  <title>Furqan | Data Engineer</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ─── Animated Background ─── -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow--cyan" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow--purple" aria-hidden="true"></div>
+  <canvas id="particleCanvas" aria-hidden="true"></canvas>
+
+  <!-- ─── Navigation ─── -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo" id="nav-logo-link" aria-label="Home">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-text">Furqan</span>
+        <span class="logo-bracket">/&gt;</span>
+      </a>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="#hero"      class="nav-link" data-section="hero">Home</a></li>
+        <li><a href="#skills"    class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#projects"  class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#education" class="nav-link" data-section="education">Education</a></li>
+        <li><a href="#contact"   class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ─── Hero Section ─── -->
+    <section class="hero section" id="hero" aria-label="Introduction">
+      <div class="hero-content">
+        <div class="hero-badge" id="hero-badge">
+          <span class="badge-dot"></span>
+          <span>Available for opportunities</span>
+        </div>
+        <p class="hero-greeting" id="hero-greeting">Hello, World! 👋</p>
+        <h1 class="hero-name" id="hero-name">
+          I'm <span class="gradient-text">Furqan</span>
+        </h1>
+        <div class="hero-role-wrapper" aria-label="Role: Data Engineer">
+          <span class="hero-role-static">A&nbsp;</span>
+          <span class="hero-role-dynamic" id="hero-role-dynamic" aria-live="polite"></span>
+          <span class="hero-cursor" aria-hidden="true">|</span>
+        </div>
+        <p class="hero-bio" id="hero-bio">
+          I architect data pipelines, wrangle large datasets, and extract actionable insights 
+          from the noise — turning bytes into business value.
+        </p>
+        <div class="hero-cta" id="hero-cta">
+          <a href="#projects" class="btn btn--primary" id="btn-view-work">
+            <span>View My Work</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#contact" class="btn btn--ghost" id="btn-contact">
+            Get In Touch
+          </a>
+        </div>
+        <div class="hero-stats" id="hero-stats" aria-label="Quick stats">
+          <div class="stat-item">
+            <span class="stat-number" data-target="50">0</span><span class="stat-suffix">+</span>
+            <span class="stat-label">Datasets Processed</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="10">0</span><span class="stat-suffix">+</span>
+            <span class="stat-label">Projects Built</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="3">0</span><span class="stat-suffix">+</span>
+            <span class="stat-label">Years Learning</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="code-window glass">
+          <div class="code-window__header">
+            <span class="code-dot code-dot--red"></span>
+            <span class="code-dot code-dot--yellow"></span>
+            <span class="code-dot code-dot--green"></span>
+            <span class="code-window__title">pipeline.py</span>
+          </div>
+          <pre class="code-window__body"><code id="code-typewriter"></code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Skills Section ─── -->
+    <section class="skills section" id="skills" aria-label="Skills and technologies">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">What I Work With</span>
+          <h2 class="section-title">Technical <span class="gradient-text">Arsenal</span></h2>
+          <p class="section-subtitle">Technologies and tools I've honed to build reliable data solutions.</p>
+        </div>
+        <div class="skills-grid" id="skills-grid">
+          <!-- Skill cards injected by JS -->
+        </div>
+        <div class="tools-row" id="tools-row" aria-label="Additional tools">
+          <!-- Tool chips injected by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Projects Section ─── -->
+    <section class="projects section" id="projects" aria-label="Portfolio projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">What I've Built</span>
+          <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+          <p class="section-subtitle">A selection of data engineering and analytics projects I've built end-to-end.</p>
+        </div>
+        <div class="projects-filter" role="group" aria-label="Filter projects">
+          <button class="filter-btn active" data-filter="all" id="filter-all">All</button>
+          <button class="filter-btn" data-filter="pipeline"  id="filter-pipeline">Pipelines</button>
+          <button class="filter-btn" data-filter="analytics" id="filter-analytics">Analytics</button>
+          <button class="filter-btn" data-filter="database"  id="filter-database">Database</button>
+        </div>
+        <div class="projects-grid" id="projects-grid">
+          <!-- Project cards injected by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Education Section ─── -->
+    <section class="education section" id="education" aria-label="Education and certifications">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">My Background</span>
+          <h2 class="section-title">Education &amp; <span class="gradient-text">Certifications</span></h2>
+          <p class="section-subtitle">The academic and professional foundation behind my data expertise.</p>
+        </div>
+
+        <!-- Dual Timeline Grid -->
+        <div class="dual-timeline">
+
+          <!-- ── LEFT: Certifications ── -->
+          <div class="dual-timeline__col" id="col-certifications">
+            <div class="dual-timeline__col-header">
+              <span class="dual-timeline__col-icon">📜</span>
+              <h3 class="dual-timeline__col-title">Certifications &amp; Practice</h3>
+            </div>
+            <div class="dual-timeline__track dual-timeline__track--cyan">
+
+              <!-- Cert 1 -->
+              <article class="dt-item" aria-label="SQL Bootcamp certification">
+                <div class="dt-item__node" aria-hidden="true">
+                  <span class="dt-item__dot"></span>
+                </div>
+                <div class="dt-item__card glass-dark">
+                  <div class="dt-item__badge dt-item__badge--cyan">Udemy</div>
+                  <h4 class="dt-item__title">The Complete SQL Bootcamp: Go from Zero to Hero</h4>
+                  <p class="dt-item__desc">Developed robust database management skills through a 9-hour intensive, focusing on writing complex queries, schema design, and analyzing relational database architecture.</p>
+                  <div class="dt-item__meta">
+                    <span class="dt-item__tag">SQL</span>
+                    <span class="dt-item__tag">Databases</span>
+                    <span class="dt-item__tag">Schema Design</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Cert 2 -->
+              <article class="dt-item" aria-label="Python Bootcamp certification">
+                <div class="dt-item__node" aria-hidden="true">
+                  <span class="dt-item__dot"></span>
+                </div>
+                <div class="dt-item__card glass-dark">
+                  <div class="dt-item__badge dt-item__badge--cyan">Udemy</div>
+                  <h4 class="dt-item__title">Complete 2025 Python Bootcamp</h4>
+                  <p class="dt-item__desc">Mastered core Python programming from scratch via 12.5 hours of hands-on training, emphasizing practical logic building, data handling, and application development.</p>
+                  <div class="dt-item__meta">
+                    <span class="dt-item__tag">Python</span>
+                    <span class="dt-item__tag">Data Handling</span>
+                    <span class="dt-item__tag">OOP</span>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Cert 3 -->
+              <article class="dt-item" aria-label="Elements of AI certification">
+                <div class="dt-item__node" aria-hidden="true">
+                  <span class="dt-item__dot"></span>
+                </div>
+                <div class="dt-item__card glass-dark">
+                  <div class="dt-item__badge dt-item__badge--cyan">University of Helsinki &amp; MinnaLearn</div>
+                  <h4 class="dt-item__title">Elements of AI</h4>
+                  <p class="dt-item__desc">Completed a comprehensive 2 ECTS credit certification covering foundational artificial intelligence concepts, machine learning principles, and their real-world implications.</p>
+                  <div class="dt-item__meta">
+                    <span class="dt-item__tag">AI</span>
+                    <span class="dt-item__tag">Machine Learning</span>
+                    <span class="dt-item__tag">2 ECTS</span>
+                  </div>
+                </div>
+              </article>
+
+            </div><!-- /track -->
+          </div><!-- /col certifications -->
+
+          <!-- ── RIGHT: Education ── -->
+          <div class="dual-timeline__col" id="col-education">
+            <div class="dual-timeline__col-header">
+              <span class="dual-timeline__col-icon">🎓</span>
+              <h3 class="dual-timeline__col-title">Academic Foundation</h3>
+            </div>
+            <div class="dual-timeline__track dual-timeline__track--purple">
+
+              <!-- Edu 1 -->
+              <article class="dt-item" aria-label="Sino-Pak Dual Diploma">
+                <div class="dt-item__node" aria-hidden="true">
+                  <span class="dt-item__dot"></span>
+                </div>
+                <div class="dt-item__card glass-dark">
+                  <div class="dt-item__badge dt-item__badge--purple">NUTECH — Ongoing</div>
+                  <h4 class="dt-item__title">Sino-Pak Dual Diploma in Big Data Technology</h4>
+                  <p class="dt-item__subtitle">National University of Technology (NUTECH)</p>
+                  <p class="dt-item__desc">Building a strong foundation in data pipelines, software development, and database architecture. Currently preparing for an international academic transition to Guizhou, China, for the final year to expand global technical perspectives and seamlessly bridge into a bachelor's degree program.</p>
+                  <div class="dt-item__meta">
+                    <span class="dt-item__tag">Big Data</span>
+                    <span class="dt-item__tag">Data Pipelines</span>
+                    <span class="dt-item__tag">Database Architecture</span>
+                  </div>
+                </div>
+              </article>
+
+            </div><!-- /track -->
+          </div><!-- /col education -->
+
+        </div><!-- /dual-timeline -->
+      </div>
+    </section>
+
+    <!-- ─── Contact Section ─── -->
+    <section class="contact section" id="contact" aria-label="Contact information">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Let's Connect</span>
+          <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+          <p class="section-subtitle">Have a project in mind or want to discuss data opportunities? I'd love to hear from you.</p>
+        </div>
+        <div class="contact-layout">
+          <div class="contact-info glass">
+            <h3 class="contact-info__title">Let's build something <span class="gradient-text">data-driven</span> together.</h3>
+            <p class="contact-info__text">
+              Whether it's designing a scalable ETL pipeline, optimizing a data warehouse, 
+              or exploring a new data challenge — I'm all ears.
+            </p>
+            <div class="contact-links" id="contact-links">
+              <a href="mailto:its.furqan.ahmed.347@gmail.com" class="contact-link" id="contact-email" aria-label="Send email to Furqan">
+                <div class="contact-link__icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </div>
+                <div>
+                  <span class="contact-link__label">Email</span>
+                  <span class="contact-link__value">its.furqan.ahmed.347@gmail.com</span>
+                </div>
+              </a>
+              <a href="https://github.com/Furqan-Ahmed-409" target="_blank" rel="noopener noreferrer" class="contact-link" id="contact-github" aria-label="Visit Furqan's GitHub profile">
+                <div class="contact-link__icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                </div>
+                <div>
+                  <span class="contact-link__label">GitHub</span>
+                  <span class="contact-link__value">Furqan-Ahmed-409</span>
+                </div>
+              </a>
+              <a href="https://www.linkedin.com/in/furqan-ahmed-a145863a2/" target="_blank" rel="noopener noreferrer" class="contact-link" id="contact-linkedin" aria-label="Visit Furqan's LinkedIn profile">
+                <div class="contact-link__icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </div>
+                <div>
+                  <span class="contact-link__label">LinkedIn</span>
+                  <span class="contact-link__value">Furqan Ahmed</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <form class="contact-form glass" id="contact-form" novalidate aria-label="Contact form">
+            <div class="form-group">
+              <label for="form-name" class="form-label">Your Name</label>
+              <input type="text" id="form-name" name="name" class="form-input" placeholder="John Doe" required autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="form-email" class="form-label">Email Address</label>
+              <input type="email" id="form-email" name="email" class="form-input" placeholder="john@example.com" required autocomplete="email" />
+            </div>
+            <div class="form-group">
+              <label for="form-subject" class="form-label">Subject</label>
+              <input type="text" id="form-subject" name="subject" class="form-input" placeholder="Data pipeline project..." required />
+            </div>
+            <div class="form-group">
+              <label for="form-message" class="form-label">Message</label>
+              <textarea id="form-message" name="message" class="form-textarea" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full" id="form-submit">
+              <span id="btn-submit-text">Send Message</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4 20-7z"/></svg>
+            </button>
+            <div class="form-success" id="form-success" role="alert" aria-live="polite" hidden>
+              ✅ Message sent! I'll get back to you soon.
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ─── Footer ─── -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <p class="footer-text">
+        Crafted with <span class="footer-heart" aria-label="love">❤️</span> by 
+        <span class="gradient-text">Furqan</span> &nbsp;|&nbsp; 
+        Built with HTML, CSS &amp; JavaScript
+      </p>
+      <p class="footer-copy">© <span id="footer-year"></span> Furqan. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scroll-to-top button -->
+  <button class="scroll-top" id="scroll-top" aria-label="Scroll back to top" title="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
